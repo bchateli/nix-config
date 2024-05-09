@@ -20,6 +20,9 @@
 
   # Add flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Declutter nix-store
+  nix.settings.auto-optimise-store = true;
   
   # Allow garbage collector
   nix.gc = {

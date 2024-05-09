@@ -67,6 +67,7 @@
    python311
 #   adobe-reader
    libreoffice-fresh   
+   neovim
   ];
   
   #Various programs
@@ -105,6 +106,22 @@
 	userEmail = "baptiste.chatelier1@gmail.com";
 	userName = "Baptiste CHATELIER";
   };
+
+  programs.btop = {
+	enable = true;
+  };
+
+  #Default programs
+  xdg.mimeApps = {
+	enable = true;
+	defaultApplications = {
+		"applications/pdf" = ["org.gnome.Evince.desktop"];
+		"image/png" = ["org.gnome.Loupe.desktop"];
+		"image/jpg"= ["org.gnome.Loupe.desktop"];
+	};
+  };
+  
+  xdg.configFile."mimeapps.list".force = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
