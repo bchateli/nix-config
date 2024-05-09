@@ -22,6 +22,10 @@
 	      name = "GitHub";
 	      url = "https://github.com/";
 	    }
+	    {
+	      name = "NixOS Search - Packages";
+	      url = "https://search.nixos.org/packages";
+	    }
             {
               name = "IEEE INSA";
               url = "javascript:(function(){window.open('https://ieeexplore-ieee-org.rproxy.insa-rennes.fr'+location.pathname+location.search,'_blank')})();";

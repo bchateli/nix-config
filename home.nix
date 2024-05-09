@@ -62,7 +62,11 @@
    thunderbird
    vscode
    spotify
-   
+   discord
+   inkscape-with-extensions
+   python311
+#   adobe-reader
+   libreoffice-fresh   
   ];
   
   #Various programs
