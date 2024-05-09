@@ -4,7 +4,7 @@
   #import other modules
   imports = [
 	#firefox config in separate file
-	./firefox.nix
+	./customs/firefox.nix
   ];
   
   #Add partial scaling for desktop env.
@@ -82,7 +82,7 @@
 	syntaxHighlighting.enable = true;
 	shellAliases = {
 		la = "ls -la";
-		nixrebuild = "sudo nixos-rebuild switch --flake ~/.nix-config#default";
+		nixrebuild = "cd ~/.nix-config && nix flake update && cd && sudo nixos-rebuild switch --flake ~/.nix-config#default";
 		nixhmedit = "nano ~/.nix-config/home.nix";
 	};
 	zplug = {

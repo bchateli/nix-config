@@ -100,6 +100,11 @@
   programs = {
 	zsh.enable = true;
   };
+  
+  #Install fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "Hack" ]; })
+  ];  
    
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.baptiste = {
