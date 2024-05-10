@@ -23,6 +23,10 @@
 	      url = "https://github.com/";
 	    }
 	    {
+	      name = "Teams";
+	      url = "https://teams.microsoft.com/v2/";
+	    }
+	    {
 	      name = "NixOS Search - Packages";
 	      url = "https://search.nixos.org/packages";
 	    }

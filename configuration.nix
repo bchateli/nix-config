@@ -57,17 +57,23 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
+  # Configure xserver
   services.xserver = {
+    #Enable the X11 windowing system
+    enable = true;
+
+    #Enable the GNOME DE
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    
+    #Configure keymap
     layout = "fr";
     xkbVariant = "azerty";
+
+    #Enable autologin
+    displayManager.autoLogin.enable = true;
+    displayManager.autoLogin.user = "baptiste";
   };
 
   # Configure console keymap
@@ -141,6 +147,9 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
   ];
+
+  # Add env variable for unblurry vscode
+  environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
