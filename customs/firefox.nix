@@ -19,6 +19,10 @@
 	      url = "http://192.168.1.60:3000";
    	    }
 	    {
+	      name = "Notion";
+	      url = "https://www.notion.so/Perso-c91996574a60494d9d2c830e869156a1";
+	    }
+	    {
 	      name = "GitHub";
 	      url = "https://github.com/";
 	    }
