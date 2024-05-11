@@ -38,7 +38,11 @@
               name = "IEEE INSA";
               url = "javascript:(function(){window.open('https://ieeexplore-ieee-org.rproxy.insa-rennes.fr'+location.pathname+location.search,'_blank')})();";
             }
-          ];
+            {
+	      name = "Messenger";
+	      url = "https://www.messenger.com/t/784404468329630/";
+	    }
+	  ];
         }
       ];
       settings = {

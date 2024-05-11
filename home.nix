@@ -68,7 +68,7 @@
 #   adobe-reader
    libreoffice-fresh   
    neovim
-  ];
+ ];
   
   #Various programs
   programs.texlive = {
