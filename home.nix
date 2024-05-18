@@ -85,6 +85,7 @@
 		la = "ls -la";
 		nixrebuild = "cd ~/.nix-config && nix flake update && cd && sudo nixos-rebuild switch --flake ~/.nix-config#default";
 		nixhmedit = "nvim ~/.nix-config/home.nix";
+		nixcfedit = "nvim ~/.nix-config/configuration.nix";
 	};
 	zplug = {
 		enable = true;
@@ -115,7 +116,7 @@
   xdg.mimeApps = {
 	enable = true;
 	defaultApplications = {
-		"applications/pdf" = ["org.gnome.Evince.desktop"];
+		"application/pdf" = ["org.gnome.Evince.desktop"];
 		"image/png" = ["org.gnome.Loupe.desktop"];
 		"image/jpg"= ["org.gnome.Loupe.desktop"];
 	};

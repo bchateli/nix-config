@@ -109,7 +109,6 @@
   services.thermald.enable = true;
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
-  powerManagement.powertop.enable = true;  
 
   # Enable system-wide needed programs
   programs = {
@@ -153,6 +152,8 @@
      mlocate
      neofetch
      kitty
+#     powertop
+     thermald
   ];
 
   # Add env variable for unblurry vscode
