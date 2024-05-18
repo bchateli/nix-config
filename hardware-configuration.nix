@@ -13,6 +13,9 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  # Select the linux kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/5763e932-bc70-422d-84a9-875567ba732e";
       fsType = "ext4";
