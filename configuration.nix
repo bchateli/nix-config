@@ -104,6 +104,12 @@
 
   # Enable fingerprint reader
   services.fprintd.enable = true;
+ 
+  # Enable power saving services
+  services.thermald.enable = true;
+  services.power-profiles-daemon.enable = false;
+  services.tlp.enable = true;
+  powerManagement.powertop.enable = true;  
 
   # Enable system-wide needed programs
   programs = {
@@ -122,10 +128,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-        git
-	mlocate
-        neofetch
-	kitty	
+  
     ];
   };
   
@@ -146,6 +149,10 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
+     git
+     mlocate
+     neofetch
+     kitty
   ];
 
   # Add env variable for unblurry vscode
