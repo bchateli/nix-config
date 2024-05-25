@@ -154,7 +154,8 @@
      kitty
 #     powertop
      thermald
-  ];
+     dig
+ ];
 
   # Add env variable for unblurry vscode
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };

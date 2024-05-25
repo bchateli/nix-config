@@ -68,6 +68,8 @@
 #   adobe-reader
    libreoffice-fresh   
    neovim
+   hugo
+   gimp-with-plugins
  ];
   
   #Various programs
@@ -81,6 +83,7 @@
 	enableAutosuggestions = true;
 	enableCompletion = true;
 	syntaxHighlighting.enable = true;
+
 	shellAliases = {
 		la = "ls -la";
 		nixrebuild = "cd ~/.nix-config && nix flake update && cd && sudo nixos-rebuild switch --flake ~/.nix-config#default";
