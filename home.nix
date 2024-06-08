@@ -70,6 +70,7 @@
    neovim
    hugo
    gimp-with-plugins
+   calibre
  ];
   
   #Various programs
