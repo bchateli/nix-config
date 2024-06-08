@@ -68,13 +68,14 @@
     desktopManager.gnome.enable = true;
     
     #Configure keymap
-    layout = "fr";
-    xkbVariant = "azerty";
+    xkb.layout = "fr";
+    xkb.variant = "azerty";
 
-    #Enable autologin
-    displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "baptiste";
   };
+
+  #Enable autologin
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "baptiste";
 
   # Configure console keymap
   console.keyMap = "fr";

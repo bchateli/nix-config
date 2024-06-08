@@ -9,9 +9,9 @@
   
   #Add partial scaling for desktop env.
   dconf.settings = {
-    "org/gnome/mutter" = {
-      experimental-features = [ "scale-monitor-framebuffer" ];
-    };
+    #"org/gnome/mutter" = {
+    #  experimental-features = [ "scale-monitor-framebuffer" ];
+    #};
   };
 
   #nixpgs unfree
@@ -81,7 +81,7 @@
 
   programs.zsh = {
 	enable = true;
-	enableAutosuggestions = true;
+	autosuggestion.enable = true;
 	enableCompletion = true;
 	syntaxHighlighting.enable = true;
 
@@ -99,7 +99,6 @@
 		];
 	};
   };
-
   #Define p10k theme
   home.file.".p10k.zsh" = {
   	source = ./.p10k.zsh;
