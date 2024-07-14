@@ -75,7 +75,7 @@
 
   #Enable autologin
   systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enabel = false;
+  systemd.services."autovt@tty1".enable = false;
 
   # Configure console keymap
   console.keyMap = "fr";
@@ -115,7 +115,7 @@
   services.tailscale = {
   	enable = true;
 	useRoutingFeatures = "client";
-  }
+  };
 
   # Enable system-wide needed programs
   programs = {
