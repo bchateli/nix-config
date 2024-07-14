@@ -65,12 +65,12 @@
    discord
    inkscape-with-extensions
    python311
-#   adobe-reader
    libreoffice-fresh   
    neovim
    hugo
    gimp-with-plugins
    calibre
+   trayscale
  ];
   
   #Various programs

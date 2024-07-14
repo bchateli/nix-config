@@ -74,8 +74,8 @@
   };
 
   #Enable autologin
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "baptiste";
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enabel = false;
 
   # Configure console keymap
   console.keyMap = "fr";
@@ -110,6 +110,12 @@
   services.thermald.enable = true;
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
+
+  # Enable Tailscale
+  services.tailscale = {
+  	enable = true;
+	useRoutingFeatures = "client";
+  }
 
   # Enable system-wide needed programs
   programs = {
@@ -153,7 +159,6 @@
      mlocate
      neofetch
      kitty
-#     powertop
      thermald
      dig
  ];
