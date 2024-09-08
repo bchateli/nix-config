@@ -161,7 +161,17 @@
      kitty
      thermald
      dig
+     protonup
  ];
+  
+  # Add Steam
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  
+  # For proton
+  environment.sessionVariables = {
+  	STEAM_EXTRA_COMPAT_TOOL_PATHS = "/home/user/.steam/root/compatibilitytools.d";
+  };
 
   # Add env variable for unblurry vscode
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
