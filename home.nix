@@ -71,7 +71,8 @@
    gimp-with-plugins
    calibre
    trayscale
- ];
+   beamerpresenter
+];
   
   #Various programs
   programs.texlive = {
