@@ -131,7 +131,7 @@
   users.users.baptiste = {
     isNormalUser = true;
     description = "Baptiste";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
     packages = with pkgs; [
   
@@ -172,6 +172,9 @@
   environment.sessionVariables = {
   	STEAM_EXTRA_COMPAT_TOOL_PATHS = "/home/user/.steam/root/compatibilitytools.d";
   };
+  
+  # Enable docker
+  virtualisation.docker.enable = true;
 
   # Add env variable for unblurry vscode
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };

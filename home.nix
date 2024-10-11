@@ -72,6 +72,7 @@
    calibre
    trayscale
    beamerpresenter
+   mupdf
 ];
   
   #Various programs
