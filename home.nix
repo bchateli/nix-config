@@ -72,6 +72,7 @@
    trayscale
    beamerpresenter
    mupdf
+   slack
    ])
    ++
    (with unstable; [

@@ -171,6 +171,7 @@
   programs.steam.gamescopeSession.enable = true;
   
   # For proton
+
   environment.sessionVariables = {
   	STEAM_EXTRA_COMPAT_TOOL_PATHS = "/home/user/.steam/root/compatibilitytools.d";
   };
