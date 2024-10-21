@@ -162,15 +162,13 @@
      thermald
      dig
      protonup
- ])++(with unstable; [
- 
+])++(with unstable; [
+     gnomeExtensions.another-window-session-manager 
  ]);
   
   # Add Steam
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
-  
-  # For proton
 
   environment.sessionVariables = {
   	STEAM_EXTRA_COMPAT_TOOL_PATHS = "/home/user/.steam/root/compatibilitytools.d";
