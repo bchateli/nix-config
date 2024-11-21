@@ -68,7 +68,6 @@
    neovim
    hugo
    gimp-with-plugins
-   calibre
    trayscale
    beamerpresenter
    mupdf
