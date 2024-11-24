@@ -16,7 +16,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
    let
      system = "x86_64-linux";
      pkgs = nixpkgs.legacyPackages.${system};
@@ -28,8 +28,16 @@
       };
       modules = [
         ./configuration.nix
-        inputs.home-manager.nixosModules.default
       ];
+    };
+    homeConfigurations = {
+    	"bchateli@framework" = home-manager.lib.homeManagerConfiguration {
+		pkgs = nixpkgs.legacyPackages.x86_64-linux;
+		extraSpecialArgs = {inherit inputs unstable;};
+		modules = [
+			inputs.home-manager.nixosModules.default	
+		];
+	};
     };
   };
 }
