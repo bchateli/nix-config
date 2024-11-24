@@ -70,11 +70,9 @@
    beamerpresenter
    mupdf
    slack
-   chromium
    ])
    ++
    (with unstable; [
-   firefox
    vscode
    (inkscape-with-extensions.override {inkscapeExtensions = [ inkscape-extensions.textext ];})
    ]);
