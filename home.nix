@@ -62,7 +62,6 @@
    thunderbird
    spotify
    discord
-   inkscape-with-extensions
    python311
    libreoffice-fresh   
    neovim
@@ -76,6 +75,7 @@
    ++
    (with unstable; [
    vscode
+   (inkscape-with-extensions.override {inkscapeExtensions = [ inkscape-extensions.textext ];})
    ]);
   
   #Various programs

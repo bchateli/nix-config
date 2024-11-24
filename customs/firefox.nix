@@ -58,7 +58,6 @@
         ublock-origin
         bitwarden
         i-dont-care-about-cookies
-
       ];
     };
   };

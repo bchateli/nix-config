@@ -107,9 +107,9 @@
   services.fprintd.enable = true;
  
   # Enable power saving services
-  services.thermald.enable = true;
-  services.power-profiles-daemon.enable = false;
-  services.tlp.enable = true;
+  services.thermald.enable = false;
+  services.power-profiles-daemon.enable = true;
+  services.tlp.enable = false;
 
   # Enable Tailscale
   services.tailscale = {
