@@ -58,7 +58,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-   firefox
    thunderbird
    spotify
    discord
@@ -74,6 +73,7 @@
    ])
    ++
    (with unstable; [
+   firefox
    vscode
    (inkscape-with-extensions.override {inkscapeExtensions = [ inkscape-extensions.textext ];})
    ]);
