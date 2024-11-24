@@ -138,15 +138,6 @@
     ];
   };
   
-  #Define home-manager
-  home-manager = {
-   #pass inputs
-   extraSpecialArgs = { inherit inputs unstable;};
-   users = {
-	"baptiste" = import ./home.nix;
-    };
-  };  
-
   #Allows unfree
   nixpkgs.config.allowUnfree = true;
 
