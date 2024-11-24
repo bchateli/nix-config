@@ -96,6 +96,7 @@
 		nixrebuild = "cd ~/.nix-config && nix flake update && cd && sudo nixos-rebuild switch --flake ~/.nix-config#default";
 		nixhmedit = "nvim ~/.nix-config/home.nix";
 		nixcfedit = "nvim ~/.nix-config/configuration.nix";
+		nixfledit = "nvim ~/.nix-config/flake.nix";
 	};
 	zplug = {
 		enable = true;

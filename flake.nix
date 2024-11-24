@@ -31,7 +31,7 @@
       ];
     };
     homeConfigurations = {
-    	"bchateli@framework" = home-manager.lib.homeManagerConfiguration {
+    	"baptiste@framework" = home-manager.lib.homeManagerConfiguration {
 		pkgs = nixpkgs.legacyPackages.x86_64-linux;
 		extraSpecialArgs = {inherit inputs unstable;};
 		modules = [
