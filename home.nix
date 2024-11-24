@@ -70,6 +70,7 @@
    beamerpresenter
    mupdf
    slack
+   chromium
    ])
    ++
    (with unstable; [
