@@ -137,7 +137,16 @@
   
     ];
   };
-  
+
+  #home-manager
+  home-manager = {
+   #pass inputs
+   extraSpecialArgs = { inherit inputs unstable;};
+   users = {
+	"baptiste" = import ./home.nix;
+    };
+  };  
+
   #Allows unfree
   nixpkgs.config.allowUnfree = true;
 
@@ -153,6 +162,7 @@
      thermald
      dig
      protonup
+     docker-compose
 ])++(with unstable; [
      gnomeExtensions.another-window-session-manager 
  ]);
