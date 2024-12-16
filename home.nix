@@ -94,9 +94,9 @@
 		nixhmedit = "nvim ~/.nix-config/home.nix";
 		nixcfedit = "nvim ~/.nix-config/configuration.nix";
 		nixfledit = "nvim ~/.nix-config/flake.nix";
-		nixdstart = "(prev_dir=$(pwd); cd ~/PhD/phd_code_folder/.docker/ && docker-compose up && cd \"$prev_dir\")";
+		nixdstart = "(prev_dir=$(pwd); cd ~/PhD/phd_code_folder/.docker/ && docker-compose up -d && cd \"$prev_dir\")";
 		nixdstop = "(prev_dir=$(pwd); cd ~/PhD/phd_code_folder/.docker/ && docker-compose down && cd \"$prev_dir\")";
-		nixdupdate = "(prev_dir=$(pwd); cd ~/PhD/phd_code_folder/.docker/ && docker-compose up --build --no-cache -d && cd \"$prev_dir\")";
+		nixdupdate = "(prev_dir=$(pwd); cd ~/PhD/phd_code_folder/.docker/ && docker-compose down && docker-compose build --no-cache && docker-compose up -d && cd \"$prev_dir\")";
 		nixdprune = "docker image prune -f";
 	};
 	zplug = {

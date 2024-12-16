@@ -9,7 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-    ];
+      
+      "${inputs.nixos-hardware}/framework/13-inch/common/audio.nix"
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -84,7 +86,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  #sound.enable = true;
+  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -180,6 +182,14 @@
 
   # Add env variable for unblurry vscode
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
+
+
+  # Audio enhancements
+  hardware.framework.laptop13.audioEnhancement = {
+  	enable = true;
+	rawDeviceName = "alsa_output.pci-0000_c1_00.6.analog-stereo";
+  };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
